@@ -1,0 +1,150 @@
+import React from "react";
+
+const slides = [
+  {
+    title: "🚀 Math-Progressive Trading Strategy",
+    subtitle: "💰 A Proven Method for Consistent Profits & Scalable Growth"
+  },
+  {
+    title: "📈 Objective & Vision",
+    content: (
+      <>
+        <p><strong>Objective:</strong> I wish to start my own <strong>trading firm</strong>, leveraging this strategy to generate <strong>consistent profits</strong>.</p>
+        <p><strong>Vision:</strong></p>
+        <ul>
+          <li>✔ Scale this strategy with <strong>investor funding</strong></li>
+          <li>✔ Establish a <strong>data-driven, systematic trading operation</strong></li>
+          <li>✔ Deliver <strong>predictable and profitable</strong> results</li>
+        </ul>
+      </>
+    )
+  },
+  {
+    title: "👤 About Me",
+    content: (
+      <>
+        <p>I am <strong>Anush</strong>, a trader with <strong>3 years of experience</strong>.</p>
+        <p><strong>Why This Strategy?</strong></p>
+        <ul>
+          <li>Compared <strong>multiple trading strategies</strong> (e.g., Supply & Demand)</li>
+          <li>Developed <strong>Math-Progressive Trading Strategy</strong> for <strong>high consistency & profit recovery</strong></li>
+        </ul>
+      </>
+    )
+  },
+  {
+    title: "✅ Strategy Overview",
+    content: (
+      <ul>
+        <li>Uses <strong>Technical Analysis</strong> (All Moving Averages & Oscillators)</li>
+        <li>Trades on the <strong>1-Minute Timeframe</strong> for Fast Profits</li>
+        <li>Follows a <strong>Mathematical Staking Plan</strong> to Recover Losses & Secure Profits</li>
+      </ul>
+    )
+  },
+  {
+    title: "🎥 Watch My Strategy in Action",
+    content: <a href="https://youtu.be/Xjkk_fVLfgU" className="text-blue-500">Click to Watch: Strategy Breakdown</a>
+  },
+  {
+    title: "📊 Why This Works",
+    content: (
+      <ul>
+        <li><strong>High-Accuracy Trade Signals</strong> – We rely on multiple indicators, not guesswork</li>
+        <li><strong>1-Minute Timeframe = More Opportunities</strong> – More trades = Faster profit compounding</li>
+        <li><strong>Proven Risk Management</strong> – A strategic staking plan ensures <strong>loss recovery</strong></li>
+      </ul>
+    )
+  },
+  {
+    title: "📉 Technical Indicators Used",
+    content: (
+      <ul>
+        <li><strong>Moving Averages</strong> – Identify trends & price direction</li>
+        <li><strong>Oscillators</strong> – Confirm overbought/oversold conditions</li>
+        <li><strong>Multiple Confirmations = High Probability Trades</strong></li>
+      </ul>
+    )
+  },
+  {
+    title: "💰 Risk Management & Staking Plan",
+    content: (
+      <>
+        <p><strong>Progressive Staking Plan:</strong></p>
+        <p>1️⃣ $1 → 2️⃣ $2.17 → 3️⃣ $4.7 → 4️⃣ $10.22 → 5️⃣ $22.17 → 6️⃣ $48.12</p>
+        <p>✔ If a trade <strong>loses</strong>, the next bet <strong>recovers the loss + profits</strong></p>
+        <p>✔ Losing <strong>6 trades in a row is nearly impossible</strong> with high-probability setups</p>
+      </>
+    )
+  },
+  {
+    title: "❌ Why This Is NOT Gambling",
+    content: (
+      <ul>
+        <li><strong>Data-Driven Decisions</strong> – Every trade is backed by analysis</li>
+        <li><strong>Planned Risk</strong> – Staking plan ensures control over losses</li>
+        <li><strong>Proven Market Patterns</strong> – Trading follows trends, not random chance</li>
+      </ul>
+    )
+  },
+  {
+    title: "💸 Performance Overview",
+    content: <a href="https://1drv.ms/x/c/9aeb2cc392738e82/Ea292WiTBz9EuOi1hQ1-f1kB75Fy8Pg0yFhcBHBf9-_--A?e=HvAroN" className="text-blue-500">Trading Journal</a>
+  },
+  {
+    title: "🌟 Why Funding Can Change Your Life",
+    content: (
+      <p>By funding this strategy, investors can gain substantial profits through the profit-sharing model. Given the strategy’s high potential, this can be a life-changing opportunity.</p>
+    )
+  },
+  {
+    title: "💡 Investor Opportunity & Profit-Sharing Model",
+    content: (
+      <>
+        <p><strong>Why Invest?</strong></p>
+        <ul>
+          <li>✔ <strong>Scalability</strong> – More capital = Higher profits</li>
+          <li>✔ <strong>Risk-Controlled Approach</strong> – Losses are managed mathematically</li>
+          <li>✔ <strong>Consistent Returns</strong> – Market-proven strategy with real-time results</li>
+        </ul>
+        <p><strong>Profit Split:</strong></p>
+        <p>Investor earns <strong>30%</strong> of net profits, Anush retains <strong>70%</strong> for strategy execution.</p>
+      </>
+    )
+  },
+  {
+    title: "🚀 Summary & Call to Action",
+    content: (
+      <>
+        <p>💡 <strong>This Strategy Works Because:</strong></p>
+        <ul>
+          <li>✔ It’s <strong>Logical, Calculated, & Profitable</strong></li>
+          <li>✔ It Uses <strong>Technical Indicators & Market Trends</strong></li>
+          <li>✔ It Has a <strong>Mathematical Staking Plan for Loss Recovery</strong></li>
+        </ul>
+        <p>📩 <strong>Let's Connect!</strong></p>
+      </>
+    )
+  }
+];
+
+const Slide = ({ title, subtitle, content }) => (
+  <div className="p-8 border-b border-gray-300 bg-white text-black">
+    <h2 className="text-2xl font-bold flex items-center">
+      <span className="w-4 h-4 bg-yellow-400 rounded-full inline-block mr-2"></span>
+      {title}
+    </h2>
+    {subtitle && <p className="text-lg mt-2">{subtitle}</p>}
+    {content && <div className="mt-4 text-lg">{content}</div>}
+  </div>
+);
+
+export default function TradingWebsite() {
+  return (
+    <div className="max-w-4xl mx-auto py-10">
+      {slides.map((slide, index) => (
+        <Slide key={index} {...slide} />
+      ))}
+    </div>
+  );
+}
